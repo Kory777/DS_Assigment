@@ -1,0 +1,10 @@
+%This is splay tree example given by professor
+I10
+I20
+I40
+R20
+C10
+C30
+I30
+I80
+I20
