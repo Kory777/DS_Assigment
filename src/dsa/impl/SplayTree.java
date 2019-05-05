@@ -57,7 +57,8 @@ public class SplayTree<T extends Comparable<T>> extends BinarySearchTree<T> {
 		   BTNode nRight = node.right;
 		   BTNode nLeft = node.left;
 		   BTNode nParent = node.parent;
-		   //不是Root
+		   
+		   //Suppose the node we want to remove isn't root
 		   if(isExternal(nRight) && isExternal(nLeft)) {
 			   BTNode n1 = newNode(null, nParent);
 			   if(node.element().compareTo(nParent.element()) > 0) {
@@ -106,7 +107,7 @@ public class SplayTree<T extends Comparable<T>> extends BinarySearchTree<T> {
 			   }
 		   }
 	   }
-	   //假设要移除的是Root
+	   //Suppose the node we want to remove is root
 	   else {
 		   BTNode nRight = node.right;
 		   BTNode nLeft = node.left;
@@ -274,7 +275,7 @@ public class SplayTree<T extends Comparable<T>> extends BinarySearchTree<T> {
 		   return n;
 	   }
 	   if(isExternal(n)) {
-//		   System.out.println("is an external node");
+		   System.out.println("is an external node");
 		   return n;
 	   }
 	   else {
